@@ -7,5 +7,14 @@
     <title>Time | Date | Month | Year</title>
 </head>
 <body>
+
+    <h1></h1>
+
+
+    <script>
+        fetch('https://timedaymonthyear.vercel.app/api').then(res => res.json()).then(data => {
+            document.querySelector('h1').innerHTML = `Current Year is : ${data}`;
+        });
+    </script>
 </body>
 </html>
