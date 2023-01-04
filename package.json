@@ -1,0 +1,26 @@
+{
+  "name": "timedaymonthyear",
+  "version": "1.0.0",
+  "description": "An API to get the most acurate time, date, year details",
+  "main": "api/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d33pfri3d/timedaymonthyear.git"
+  },
+  "keywords": [
+    "time",
+    "date",
+    "month",
+    "year",
+    "api"
+  ],
+  "author": "Shaun D",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d33pfri3d/timedaymonthyear/issues"
+  },
+  "homepage": "https://github.com/d33pfri3d/timedaymonthyear#readme"
+}
