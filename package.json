@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/d33pfri3d/timedaymonthyear/issues"
   },
-  "homepage": "https://github.com/d33pfri3d/timedaymonthyear#readme"
+  "homepage": "https://github.com/d33pfri3d/timedaymonthyear#readme",
+  "dependencies": {
+    "@vercel/node": "^2.8.3"
+  }
 }
