@@ -1,4 +1,6 @@
-export const getDateBasedOnTimezone = (timeZone: string = "Europe/London") => {
-    const dateString = new Date().toLocaleString("en-GB", { timeZone });
+export const getDateBasedOnTimezone = (timeZone: string = "UTC") => {
+    const dateString = new Date().toLocaleString("en-US", {
+        timeZone,
+    });
     return new Date(dateString);
 }
