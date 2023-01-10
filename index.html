@@ -7,15 +7,114 @@
     <title>Time | Date | Month | Year</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☠️</text></svg>">
 </head>
+<style>
+
+    @font-face {
+	    font-family: 'Virgil';
+	    src: url('./fonts/Virgil.woff2');
+	    font-display: swap; 
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        border: 5px solid black;
+	    border-radius: 255px 15px 255px 15px / 15px 255px 15px 255px;
+	    min-height: 100vh;
+        background-color: #f7f6f6;
+        font-family: monospace;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    h1 {
+        font-family: 'Virgil';
+    }
+
+    .introduction {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+</style>
 <body>
 
-    <h1></h1>
+    <header>
+        <h1>TiDaMoYe</h1>
+    </header>
+
+    <section class="introduction">
+        <div>
+            <p>What days is it? What Month is it? How many minutes is it past the hour?</p>
+            <p>Since the invention of the World Wide Web, knowing these things has always only been availble to those who knew how to wrangle time.</p>
+            <p>Now, time is available to everyone, everywhere, all the time.<sup>(1)</sup></p>
+        </div>
+        <img src="images/time.png" alt="Time" width="100%">
+    </section>
+
+    <section class="introduction">
+        <img src="images/footer.png" alt="Time Management" width="50%">
+        <div>
+            <p>Its happened to everyone, at some point.</p>
+        </div>
+    </section>
 
 
-    <script>
-        fetch('https://timedaymonthyear.vercel.app/api/').then(res => res.json()).then(data => {
+    <blockquote>
+       <img src="images/moosk.png" alt="Elon Musk is a twat!">
+    </blockquote>
+
+    <section>
+        <div>
+            <h2>API</h2>
+            <p>Our API is available to everyone, everywhere, all the time.</p>
+        </div>
+
+        <div>
+            <h2>Open Sourced</h2>
+            <p>The source code is available for those wishing to deploy it on their own infra.</p>
+        </div>
+
+        <div>
+            <h2>Web<sup>3</sup></h2>
+            <p>We are a full-sync, decentralised API node deployed to The Blockchain. Integrating our API into your web app will make you fully Web3 complient.</p>
+        </div>
+    </section>
+
+    <section class="pricing">
+
+        <h1>Pricing</h1>
+        <p>When it comes to access, our API is always open with unlimited calls, once per day. Anytime of the day, everyone is free to make a request to ANY endpoint, once. If you need out 'Firehose' access, then a Lifetime Liscence is available.</p>
+        <p>1 Payment guarantees you access for life.<sup>(2)</sup></p>
+        <div>
+            <h2>Lifetime</h2>
+            <div>
+                <span>£299.99</span>
+                <span>£199.97</span>
+            </div>
+        </div>
+
+        <div>
+            <h2>Enterprise</h2>
+        </div>
+    </section>
+
+
+    <footer>
+
+    </footer>
+
+
+    <!-- <script>
+        fetch('https://timedaymonthyear.vercel.app/api/year').then(res => res.json()).then(data => {
             document.querySelector('h1').innerHTML = `Current Year is : ${data}`;
         });
-    </script>
+    </script> -->
 </body>
 </html>
