@@ -27,12 +27,26 @@
         font-family: monospace;
     }
 
+    p{
+        font-size: 1.5rem;
+    }
+
     header {
         text-align: center;
     }
 
-    h1 {
+    h1, h2 {
         font-family: 'Virgil';
+    }
+
+    pre{
+        font-size: 0.8rem;
+        background-color: darkgray;
+        font-family: monospace;
+        width: 265px;
+        padding: 1rem;
+        margin: 0 auto;
+
     }
 
     .introduction {
@@ -40,6 +54,60 @@
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
+        flex-direction: column;
+    }
+
+    section > h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .features{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .feature-box {
+        border: 5px solid black;
+	    border-radius: 255px 15px 255px 15px / 15px 255px 15px 255px;
+        flex-shrink: 0;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .feature-box > h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .feature-box > p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    footer p {
+        text-align: center;
+        font-size: smaller;
+    }
+
+    @media (min-width: 768px) {
+        .introduction {
+            flex-direction: row;
+        }
+
+        .features {
+            flex-direction: row;
+            height: 350px;
+        }
+
+        .feature-box {
+            width: 30%;
+            height: 200px;
+            padding: 0 30px;
+        }
     }
 
 </style>
@@ -47,6 +115,7 @@
 
     <header>
         <h1>TiDaMoYe</h1>
+        <pre>fetch('tidaymoye.com/api/year')</pre>
     </header>
 
     <section class="introduction">
@@ -59,39 +128,46 @@
     </section>
 
     <section class="introduction">
-        <img src="images/footer.png" alt="Time Management" width="50%">
+        <img src="images/footer.png" alt="Time Management" width="100%">
         <div>
             <p>Its happened to everyone, at some point.</p>
+            <p>Your Rockstar developer has left the project and someone has forgotten to update the date in the footer, with our revolutionary API, write once, deploy once and never think about it.</p>
         </div>
     </section>
 
 
-    <blockquote>
-       <img src="images/moosk.png" alt="Elon Musk is a twat!">
-    </blockquote>
+    <section>
+        <h2>Customer Feedback</h2>
+       <img src="images/moosk.png" alt="Elon Musk is a twat!" width="100%">
+    </section>
 
     <section>
-        <div>
-            <h2>API</h2>
-            <p>Our API is available to everyone, everywhere, all the time.</p>
-        </div>
+        <h2>Features</h2>
 
-        <div>
-            <h2>Open Sourced</h2>
-            <p>The source code is available for those wishing to deploy it on their own infra.</p>
-        </div>
-
-        <div>
-            <h2>Web<sup>3</sup></h2>
-            <p>We are a full-sync, decentralised API node deployed to The Blockchain. Integrating our API into your web app will make you fully Web3 complient.</p>
+        <div class="features">
+            <div class="feature-box">
+                <h2>API</h2>
+                <p>Our API is available to everyone, everywhere, all the time.</p>
+            </div>
+    
+            <div class="feature-box">
+                <h2>Open Source</h2>
+                <p>The source code is available for those wishing to deploy it on their own infra.</p>
+                <center><a href="https://https://github.com/d33pfri3d/timedaymonthyear">Github</a></center>
+            </div>
+    
+            <div class="feature-box">
+                <h2>Web<sup>3</sup></h2>
+                <p>We are a full-sync, decentralised API node deployed to The Blockchain. Integrating our API into your web app will make you fully Web3 complient.</p>
+            </div>
         </div>
     </section>
 
     <section class="pricing">
 
         <h1>Pricing</h1>
-        <p>When it comes to access, our API is always open with unlimited calls, once per day. Anytime of the day, everyone is free to make a request to ANY endpoint, once. If you need out 'Firehose' access, then a Lifetime Liscence is available.</p>
-        <p>1 Payment guarantees you access for life.<sup>(2)</sup></p>
+        <p>When it comes to access, our API is always open with unlimited calls, once per day. Anytime of the day, everyone is free to make a request to ANY endpoint, once. If you need our 'Firehose' access, then a Lifetime Liscence is available.</p>
+        <p>One Payment guarantees you access for life.<sup>(2)</sup></p>
         <div>
             <h2>Lifetime</h2>
             <div>
@@ -99,22 +175,18 @@
                 <span>£199.97</span>
             </div>
         </div>
-
-        <div>
-            <h2>Enterprise</h2>
-        </div>
     </section>
 
 
     <footer>
-
+        <p>Copyleft <span id="year"></span></p>
     </footer>
 
 
-    <!-- <script>
+    <script>
         fetch('https://timedaymonthyear.vercel.app/api/year').then(res => res.json()).then(data => {
-            document.querySelector('h1').innerHTML = `Current Year is : ${data}`;
+            document.querySelector('#year').innerHTML = data;
         });
-    </script> -->
+    </script>
 </body>
 </html>
