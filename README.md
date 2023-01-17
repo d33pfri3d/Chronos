@@ -8,6 +8,12 @@ Dont be one of those developers who uses the wrong date. Use TDMY.
 
 ![Footer Year Update](images/footer.png)
 
+## Documentation
+
+`/api/year`
+
+Returns the current year.
+
 
 `/api/beats`
 

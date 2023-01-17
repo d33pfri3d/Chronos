@@ -55,6 +55,7 @@
         align-items: center;
         padding: 1rem;
         flex-direction: column;
+        gap: 2rem;
     }
 
     section {
@@ -68,7 +69,7 @@
 
     .features{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         padding: 1rem;
         flex-direction: column;
@@ -80,6 +81,10 @@
         flex-shrink: 0;
         width: 100%;
         margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
     }
 
     .feature-box > h2 {
@@ -90,6 +95,10 @@
     .feature-box > p {
         font-size: 1rem;
         text-align: center;
+    }
+
+    footer {
+        position: relative;
     }
 
     footer p {
@@ -103,7 +112,7 @@
         display:flex;
         flex-direction: column;
         padding-bottom: 2rem;
-        margin: auto;
+        margin: 5rem auto;
     }
 
     .pricing-box > h2 {
@@ -150,13 +159,14 @@
 
         .feature-box {
             width: 30%;
-            height: 200px;
+            height: 300px;
             padding: 0 30px;
         }
 
         .pricing-box{
             width: 25%;
         }
+
     }
 
 </style>
@@ -218,7 +228,7 @@
         <p>When it comes to access, our API is always open with unlimited calls, once per day. Anytime of the day, everyone is free to make a request to ANY endpoint, once. If you need our 'Firehose' access, then a Lifetime Liscence is available.</p>
         <p>One Payment guarantees you access for life.<sup>(2)</sup></p>
         <div class="pricing-box">
-            <h2>Lifetime Liscence</h2>
+            <h2>Lifetime License</h2>
             <ul class="pricing-list">
                 <li>$299.99</li>
                 <li>$199.97</li>
