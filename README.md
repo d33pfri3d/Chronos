@@ -14,6 +14,25 @@ Dont be one of those developers who uses the wrong date. Use TDMY.
 
 Returns the current year.
 
+`/api/month`
+
+Returns the current month.
+
+`/api/day`
+
+Returns the current day.
+
+`/api/hour`
+
+Returns the current hour.
+
+`/api/minute`
+
+Returns the current minute.
+
+`/api/second`
+
+Returns the current second.
 
 `/api/beats`
 
